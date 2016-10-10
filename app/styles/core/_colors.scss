@@ -1,0 +1,110 @@
+//
+// Colors styles
+// --------------------------------------------------
+$colors: (
+	"success": 				$color-success,
+	"warning": 				$color-warning,
+	"error": 					$color-error,
+	"info": 					$color-info,
+	"gray": 					$color-gray,
+	"healthicity": 			$color-healthicity,
+	"auditing": 				$color-auditing,
+	"compliance": 				$color-compliance,
+	"analytics": 				$color-analytics,
+	"training": 				$color-training,
+	"coding": 				$color-coding
+);
+
+@function color($key) {
+	@if not map-has-key($colors, $key) {
+		@warn "Key `#{$key}` not found in $colors map.";
+	}
+	@return map-get($colors, $key);
+};
+
+$colors-light: (
+	"success": 				lighten( $color-success, 15% ),
+	"warning": 				lighten( $color-warning, 15% ),
+	"error": 					lighten( $color-error, 15% ),
+	"info": 					lighten( $color-info, 15% ),
+	"gray": 					lighten( $color-gray, 15% ),
+	"healthicity": 			lighten( $color-healthicity, 15% ),
+	"auditing": 				lighten( $color-auditing, 15% ),
+	"compliance": 				lighten( $color-compliance, 15% ),
+	"analytics": 				lighten( $color-analytics, 15% ),
+	"training": 				lighten( $color-training, 15% ),
+	"coding": 				lighten( $color-coding, 15% )
+
+);
+
+@function color-light($key) {
+	@if not map-has-key($colors-light, $key) {
+		@warn "Key `#{$key}` not found in $colors-light map.";
+	}
+	@return map-get($colors-light, $key);
+};
+
+$colors-highlight: (
+	"success": 				lighten( $color-success, 35% ),
+	"warning": 				lighten( $color-warning, 30% ),
+	"error": 					lighten( $color-error, 35% ),
+	"info": 					lighten( $color-info, 42% ),
+	"gray": 					lighten( $color-gray, 30% ),
+	"healthicity": 			lighten( $color-healthicity, 35% ),
+	"auditing": 				lighten( $color-auditing, 40% ),
+	"compliance": 				lighten( $color-compliance, 40% ),
+	"analytics": 				lighten( $color-analytics, 50% ),
+	"training": 				lighten( $color-training, 50% ),
+	"coding": 				lighten( $color-coding, 35% )
+
+);
+
+@function color-highlight($key) {
+	@if not map-has-key($colors-highlight, $key) {
+		@warn "Key `#{$key}` not found in $colors-highlight map.";
+	}
+	@return map-get($colors-highlight, $key);
+};
+
+$colors-dark: (
+	"success": 				desaturate(darken( $color-success, $color-adjust-dark ), 10%),
+	"warning": 				desaturate(darken( $color-warning, $color-adjust-dark ), 10%),
+	"error": 					desaturate(darken( $color-error, $color-adjust-dark ), 10%),
+	"info": 					desaturate(darken( $color-info, $color-adjust-dark ), 10%),
+	"gray": 					darken( $color-gray, $color-adjust-dark ),
+	"healthicity": 			desaturate(darken( $color-healthicity, $color-adjust-dark ), 10%),
+	"auditing": 				desaturate(darken( $color-auditing, $color-adjust-dark ), 10%),
+	"compliance": 				desaturate(darken( $color-compliance, $color-adjust-dark ), 10%),
+	"analytics": 				desaturate(darken( $color-analytics, $color-adjust-dark ), 10%),
+	"training": 				desaturate(darken( $color-training, $color-adjust-dark ), 10%),
+	"coding": 				desaturate(darken( $color-coding, $color-adjust-dark ), 10%),
+
+);
+
+@function color-dark($key) {
+	@if not map-has-key($colors-dark, $key) {
+		@warn "Key `#{$key}` not found in $colors-dark map.";
+	}
+	@return map-get($colors-dark, $key);
+};
+
+$colors-darker: (
+	"success": 				desaturate(darken( $color-success, $color-adjust-darker ), 10%),
+	"warning": 				desaturate(darken( $color-warning, $color-adjust-darker ), 10%),
+	"error": 					desaturate(darken( $color-error, $color-adjust-darker ), 10%),
+	"info": 					desaturate(darken( $color-info, $color-adjust-darker ), 10%),
+	"gray": 					darken( $color-gray, $color-adjust-darker ),
+	"healthicity": 			desaturate(darken( $color-healthicity, $color-adjust-darker ), 10%),
+	"auditing": 				desaturate(darken( $color-auditing, $color-adjust-darker ), 10%),
+	"compliance": 				desaturate(darken( $color-compliance, $color-adjust-darker ), 10%),
+	"analytics": 				desaturate(darken( $color-analytics, $color-adjust-darker ), 10%),
+	"training": 				desaturate(darken( $color-training, $color-adjust-darker ), 10%),
+	"coding": 				desaturate(darken( $color-coding, $color-adjust-darker ), 10%),
+);
+
+@function color-darker($key) {
+	@if not map-has-key($colors-darker, $key) {
+		@warn "Key `#{$key}` not found in $colors-darker map.";
+	}
+	@return map-get($colors-darker, $key);
+};

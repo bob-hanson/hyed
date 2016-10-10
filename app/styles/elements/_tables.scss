@@ -1,0 +1,283 @@
+//
+// tables styles
+// --------------------------------------------------
+
+.scrollable {
+	width: 100%;
+	overflow: auto;
+	border-top:  @table-cell-border;
+	border-left:  @table-cell-border;
+	border-right:  @table-cell-border;
+	margin: 1em 0;
+	table {
+		margin: 0;
+	}
+
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1em 0;
+	width: 100%;
+	max-width: 100%;
+	
+	
+}
+th, td {
+	word-wrap: break-word;
+}
+
+th > a {
+	
+	border-bottom: 0px !important;
+		
+	&:hover {
+		color: @color-white;
+		border:none;
+		box-shadow: none;
+	}
+}
+
+tr {
+	&:hover {
+			background: @color-gray-lighter;
+	}
+	&.info {
+		td:first-child {
+			position: relative;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 6px;
+				background: @color-info;
+			}
+		}
+	}
+	&.warning {
+		td:first-child {
+			position: relative;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 6px;
+				background: @color-warning;
+			}
+		}
+	}
+	&.success {
+		td:first-child {
+			position: relative;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 6px;
+				background: @color-success;
+			}
+		}
+	}
+	&.error {
+		td:first-child {
+			position: relative;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 6px;
+				background: @color-error;
+			}
+		}
+	}
+
+}
+td, th {
+	transition: background @animation-speed-fast @animation-type;
+	text-align: @table-cell-alignment;
+	padding: @table-cell-padding;
+	line-height: @type-line-table;
+}
+
+th {
+	color: @table-head-color;
+	background: @table-head-background;
+	font-weight: @table-head-weight;
+}
+tr td {
+	vertical-align: @table-cell-vertical-alignment;
+	border-bottom: @table-cell-border;
+	&.info {
+		background: @color-info-light;
+	}
+	&.warning {
+		background: @color-warning-light;
+	}
+	&.success {
+		background: @color-success-light;
+	}
+	&.error {
+		background: @color-error-light;
+	}
+
+}
+
+tr.selected {
+	background: @color-primary;
+	color:@color-white;
+
+	td.success {
+		background: @color-success;
+		
+	}
+
+
+}
+
+
+.table-header{
+	margin: @spacing-margin-md 0 -1em;
+	padding: 0 0 0 @spacing-margin-md;
+	.clearfix();
+	.table-title {
+		float: left;
+		margin: .5em 0;
+		border-bottom: none;
+	}
+	.table-actions {
+		float: right;
+		display: inline-block;
+		a, button, input[type=button], input[type=reset] {
+			.btn--tertiary();
+			line-height: 48px;
+			padding: 0 1rem;
+			display: block;
+			float: left;
+			margin: 0 !important;
+			& a {
+	
+				border-bottom: 0px !important;
+					
+				&:hover {
+					border:none;
+					box-shadow: none;
+				}
+			  }
+			  			i {
+				margin: 0;
+			}
+
+			&.secondary-action {
+			.btn--secondary();
+			line-height: 16px;
+			}
+		}
+
+	}
+
+}
+
+
+.table-footer{
+	margin: -1rem 0 0;
+	padding: 0 @spacing-margin-md;
+	.clearfix();
+	
+	.table-footer-actions {
+		float: right;
+		display: inline-block;
+		.clearfix();
+		button {
+			.btn--tertiary();
+			padding: 0;
+			margin: 0 !important;
+			text-align: center;
+			display: inline-block;
+			width: auto;
+			i, span {
+				display: inline-block;
+				margin: 1em;
+				line-height: 1em;
+			}
+			i:before {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+
+
+
+// @media  (max-width: @screen-lg) {
+// 	table.responsive {
+// 		margin: 0;
+// 		td, th {
+// 			position: relative;
+// 			white-space: nowrap;
+// 			overflow: hidden;
+// 			&:first-child {
+// 				display: none;
+// 			}
+// 		}
+// 		&.pinned td {
+// 			display: none;
+// 		}
+// 		.table-footer {
+// 			margin-top: 0;
+// 		}
+// 	}
+// 	.pinned {
+// 		position: absolute;
+// 		left: 0;
+// 		top: 0;
+// 		width: 35%;
+// 		overflow: hidden;
+// 		overflow-x: scroll;
+// 		border-right: 1px solid @color-gray-light;
+// 		box-shadow: 0px 0 10px rgba(0,0,0,0.1);
+// 		table {
+// 			width: 100%; 
+// 			margin: 0;
+// 			th, td {
+// 				white-space: nowrap;
+// 			}
+// 		}
+// 	}
+// 	.table-wrapper {
+// 		.clearfix();
+// 		position: relative;
+// 		overflow: hidden;
+// 		border-right: 1px solid @color-gray-light;
+// 		.scrollable {
+// 			margin-left: 35%;
+// 			overflow: scroll;
+// 			overflow-y: hidden;
+// 		}
+// 	}
+// 	.card {
+// 		table.responsive {
+// 		}
+// 		.table-wrapper {
+// 			border: none;
+// 			width: 100%;
+// 		}
+// 		.table-footer-actions {
+// 			float: none;
+// 			display: block;
+// 			text-align: center;
+// 		}
+// 	}
+// }

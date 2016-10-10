@@ -1,0 +1,90 @@
+//
+// Icon styles
+// --------------------------------------------------
+
+i, .icon {
+    display: inline-block;
+    font: normal normal normal $icon-font-size-base/1 $icon-font-primary; // shortening font declaration
+    font-size: inherit; // can't have font-size inherit on line above, so need to override
+    text-rendering: auto; // optimizelegibility throws things off #1094
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0); // ensures no half-pixel rendering in firefox
+}
+
+.icon-search:before {content: $icon-search;}
+.icon-add:before {content: $icon-add;}
+.icon-save:before {content: $icon-save;}
+.icon-remove:before {content: $icon-remove;}
+.icon-trash:before {content: $icon-trash;}
+.icon-edit:before {content: $icon-edit;}
+.icon-next:before {content: $icon-next;}
+.icon-previous:before {content: $icon-previous;}
+.icon-left:before {content: $icon-left;}
+.icon-right:before {content: $icon-right;}
+.icon-up:before {content: $icon-up;}
+.icon-down:before {content: $icon-down;}
+.icon-angle-right:before {content: $icon-angle-right;}
+.icon-angle-double-right:before {content: $icon-angle-double-right;}
+.icon-angle-double-left:before {content: $icon-angle-double-left;}
+.icon-angle-left:before {content: $icon-angle-left;}
+.icon-settings:before {content: $icon-settings;}
+.icon-sort:before {content: $icon-sort;}
+.icon-sort-down:before {content: $icon-sort-down;}
+.icon-sort-up:before {content: $icon-sort-up;}
+.icon-filter:before {content: $icon-filter;}
+.icon-import:before {content: $icon-import;}
+.icon-success:before {content: $icon-success;}
+.icon-error:before {content: $icon-error;}
+.icon-warning:before {content: $icon-warning;}
+.icon-info:before {content: $icon-info;}
+.icon-question:before {content: $icon-question;}
+.icon-user:before {content: $icon-user;}
+.icon-tasks:before {content: $icon-tasks;}
+.icon-notifications:before {content: $icon-notifications;}
+.icon-messages:before {content: $icon-messages;}
+.icon-reports:before {content: $icon-reports;}
+.icon-calendar:before {content: $icon-calendar;}
+.icon-menu:before {content: $icon-menu;}
+.icon-menu-secondary:before {content: $icon-menu-secondary;}
+.icon-folder-open:before {content: $icon-folder-open;}
+.icon-folder-close:before {content: $icon-folder-close;}
+.icon-exclamation-sign:before {content: $icon-exclamation-sign;}
+.icon-lock:before {content: $icon-lock;}
+.icon-refresh:before {content: $icon-refresh;}
+.icon-zoom-in:before {content: $icon-zoom-in;}
+.icon-zoom-out:before {content: $icon-zoom-out;}
+.icon-print:before {content: $icon-print;}
+.icon-word:before {content: $icon-word;}
+.icon-excel:before {content: $icon-excel;}
+.icon-pdf:before {content: $icon-pdf;}
+.icon-text:before {content: $icon-text;}
+.icon-select:before {content: $icon-select;}
+.icon-dashboard:before {content: $icon-dashboard;}
+.icon-reports:before {content: $icon-report;}
+
+.icon-compliance-audits:before {content: $icon-compliance-manager-audits;}
+.icon-compliance-risk:before {content: $icon-compliance-manager-risk;}
+.icon-compliance-incidents:before {content: $icon-compliance-manager-incidents;}
+.icon-compliance-documents:before {content: $icon-compliance-manager-documents;}
+.icon-compliance-attestations:before {content: $icon-compliance-manager-attestations;}
+.icon-compliance-training:before {content: $icon-compliance-manager-training;}
+.icon-compliance-roles:before {content: $icon-compliance-manager-roles;}
+.icon-compliance-toolbox:before {content: $icon-compliance-manager-toolbox;}
+.icon-compliance-superadmin:before {content: $icon-compliance-manager-superadmin;}
+
+.icon-audit-manager-cms:before {content: $icon-audit-manager-cms; font-family: $icon-font-audit-manager}
+.icon-audit-manager-key-findings:before {content: $icon-audit-manager-key-findings; font-family: $icon-font-audit-manager}
+.icon-audit-manager-note-provider:before {content: $icon-audit-manager-note-provider; font-family: $icon-font-audit-manager}
+.icon-audit-manager-audit-create:before {content: $icon-audit-manager-audit-create; font-family: $icon-font-audit-manager}
+.icon-audit-manager-audit-import:before {content: $icon-audit-manager-audit-import; font-family: $icon-font-audit-manager}
+.icon-audit-manager-audit-split:before {content: $icon-audit-manager-audit-split; font-family: $icon-font-audit-manager}
+.icon-audit-manager-audit-copy:before {content: $icon-audit-manager-audit-copy; font-family: $icon-font-audit-manager}
+.icon-audit-manager-missing-info:before {content: $icon-audit-manager-missing-info; font-family: $icon-font-audit-manager}
+.icon-audit-manager-note-internal:before {content: $icon-audit-manager-note-internal; font-family: $icon-font-audit-manager}
+.icon-audit-manager-audit-append:before {content: $icon-audit-manager-audit-append; font-family: $icon-font-audit-manager}
+.icon-audit-manager-audit-assign:before {content: $icon-audit-manager-audit-assign; font-family: $icon-font-audit-manager}
+.icon-audit-manager-note-success:before {content: $icon-audit-manager-note-success; font-family: $icon-font-audit-manager}
+.icon-audit-manager-note-info:before {content: $icon-audit-manager-note-info; font-family: $icon-font-audit-manager}
+.icon-audit-manager-note-warning:before {content: $icon-audit-manager-note-warning; font-family: $icon-font-audit-manager}
+.icon-audit-manager-chart-level-comment:before {content: $icon-audit-manager-chart-level-comment; font-family: $icon-font-audit-manager}

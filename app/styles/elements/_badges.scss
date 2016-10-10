@@ -1,0 +1,25 @@
+//
+// Badge styles
+// --------------------------------------------------
+
+.avatar-initials {}
+.avatar-name {}
+
+.badge{
+	background: color($default-color);
+	color: $color-white;
+	border-radius: $badge-border-radius;
+	display: inline-block;
+  	padding: $badge-padding;
+
+	&:empty {
+		display: none !important;
+	}
+}
+
+@each $badge, $color in $colors {
+	.badge-#{$badge} {
+		@extend .badge;
+		background-color: color($badge)
+	}
+}

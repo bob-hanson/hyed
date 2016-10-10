@@ -1,0 +1,14 @@
+<header class="card-top {{ cardColor }}">
+  {{#if cardIsAction }}
+    <span class='card-value'>{{icon-component iconClass=cardIcon }}</span>
+  {{else}}
+    <span class='card-value'>{{ cardValue }}</span>
+  {{/if}}
+  <p class='card-title'>{{ cardTitle }}</p>
+</header>
+<main class="card-middle">
+  <p class='card-content'>{{ cardContent }}</p>
+</main>
+<footer class="card-bottom">
+  {{#link-to linkPath linkObject}}{{ linkText }}{{/link-to}}
+</footer>

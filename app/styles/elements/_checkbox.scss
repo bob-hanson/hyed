@@ -1,0 +1,10 @@
+.checkbox { width: 20px; height: 20px;min-width: 20px;min-height: 20px;box-sizing: border-box;display: inline-block;margin-bottom: 16px;white-space: nowrap;cursor: pointer;outline: none;}
+.checkbox-container {position: absolute;top: 50%;-webkit-transform: translateY(-50%);transform: translateY(-50%); box-sizing: border-box;display: inline-block;width: 20px;height: 20px;left: 0;right: auto;}
+.checkbox i {position: absolute;top: 0;left: 0;width: 20px;height: 20px;border-width: 2px;border-style: solid;border-radius: 2px;}
+
+.checkbox.color1 i {border-color: color('healthicity')}
+.checkbox.color2 i {border-color: color('compliance')}
+.checkbox.color3 i {border-color: color('auditing')}
+.checkbox.color4 i {border-color: color('analytics')}
+.checkbox.color5 i {border-color: color('training')}
+.checkbox.color6 i {border-color: color('coding')}

@@ -1,0 +1,15 @@
+//
+// Animation styles
+// --------------------------------------------------
+
+
+
+@mixin animate($speed: $animation-speed-default, $prop: all) {
+	@if $speed == "slow" {
+		transition: $prop $animation-speed-slow $animation-type;
+	} @else if $speed == "fast" {
+		transition: $prop $animation-speed-fast $animation-type;
+	} @else {
+		transition: $prop $animation-speed-default $animation-type;
+	}
+}

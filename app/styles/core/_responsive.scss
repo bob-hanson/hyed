@@ -1,0 +1,33 @@
+//
+// Responsive styles
+// --------------------------------------------------
+
+@mixin container-fixed() {
+  margin-right: auto;
+  margin-left: auto;
+  @include clearfix();
+}
+
+
+@mixin container() {
+  @include container-fixed();
+  width: 100%;
+  @media (max-width: $screen-xs) {
+   max-width: $container-xs - 24px;
+  }
+  @media (min-width: $screen-xs) {
+    width: $container-xs - 24px;
+  }
+  @media (min-width: $screen-sm) {
+    width: $container-sm - 24px;
+  }
+  @media (min-width: $screen-md) {
+    width: $container-md - 24px;
+  }
+  @media (min-width: $screen-lg) {
+    width: $container-lg - 24px;
+  }
+   @media (min-width: $screen-xl) {
+    width: $container-xl - 24px;
+  }
+}

@@ -1,0 +1,129 @@
+//
+// Type styles
+// --------------------------------------------------
+
+html {
+	font-family: sans-serif; // 1
+	-ms-text-size-adjust: 100%; // 2
+	-webkit-text-size-adjust: 100%; // 2
+	height: 100%;
+	font-size: $root-font-size;
+}
+
+
+body {
+	font-family: $type-font-primary;
+	color: $type-color-body;
+	font-size: 1rem;
+	line-height: $type-line-body;
+	font-weight: $type-weight-body;
+}
+
+h1, h2, h3{
+	font-family: $type-font-heading-page;
+	line-height: $type-line-heading;
+	margin: $type-margin-heading;
+	color:$type-color-heading-page;
+	-webkit-font-smoothing: antialiased;
+}
+
+h4, h5, h6{
+	font-family: $type-font-heading-section;
+	line-height: $type-line-heading;
+	margin: $type-margin-heading;
+	color:$type-color-heading-section;
+}
+
+
+h1 {
+	font-weight: $type-weight-heading-1;
+	font-size: $type-size-heading-1;
+}
+
+h2 {
+	font-weight: $type-weight-heading-2;
+	font-size: $type-size-heading-2;
+}
+
+h3 {
+	font-weight: $type-weight-heading-3;
+	font-size: $type-size-heading-3;
+}
+
+h4 {
+	font-weight: $type-weight-heading-4;
+	font-size: $type-size-heading-4;
+	// color: $type-color-heading-article;
+	// border-bottom: solid 1px $type-color-heading-article;
+	// padding-bottom: 6px; //added because of drop letters overlapping the border
+}
+
+h5 {
+	font-weight: $type-weight-heading-5;
+	font-size: $type-size-heading-5;
+}
+
+h6 {
+	font-weight: $type-weight-heading-6;
+	font-size: $type-size-heading-6;
+}
+
+
+p {
+	margin: $type-margin-body;
+	line-height: $type-line-body;
+}
+
+strong {
+	font-weight: $type-weight-bold;
+}
+em {
+	font-style: italic;;
+}
+small{
+	font-size: $type-size-body-sm;
+}
+a {
+	color: $color-primary;
+	text-decoration: inherit;
+	border-bottom: none;
+	box-shadow: inset 0 0px 0 $type-color-body;
+	@include animate(fast);
+	&:hover {
+		box-shadow: $link-box-shadow $color-primary;
+	}
+}
+
+
+
+ul, ol {
+  padding: 0 0 0 1em;
+  margin: $type-margin-body;
+}
+
+li {
+	line-height: $type-line-list;
+	margin: $type-margin-body;
+	&:last-child {
+		margin: 0;
+	}
+}
+
+code {
+	background: color-highlight("gray");
+	color: $type-color-primary;
+	padding: .75em .75em;
+	font-size: $type-size-code;
+	font-weight: $type-weight-regular;
+	display: inline-block;
+	text-transform: lowercase;
+	margin: $type-margin-body;
+	width: 100%;
+}
+
+.fine-print {
+	color: $type-fine-print-color;
+	font-size: $type-fine-print-size;
+	font-weight: $type-fine-print-weight;
+	display: block;
+}

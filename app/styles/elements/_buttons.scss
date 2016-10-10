@@ -1,0 +1,82 @@
+//
+// Button styles
+// TODO: add sizes and Icon Buttons
+// --------------------------------------------------
+
+.button-base {
+	position: relative;
+	padding: $button-padding;
+	border-radius: $button-border-radius;
+	// width: 100%;
+	display: inline-block;
+	border: none;
+	font-weight: $button-text-weight;
+	font-size: $button-text-size;
+	text-align: center;
+	line-height: $button-line-height;
+}
+
+.button-flat {
+	@extend .button-base;
+	color: $color-primary;
+	background: transparent;
+	@include animate();
+	&:focus {
+	  outline: none;
+	}
+	&:hover, &:focus {
+	  text-decoration: none;
+	}
+	&:hover {
+		background-color: $color-highlight;
+	}
+}
+
+.button-raised {
+	@extend .button-base;
+	background-color: $color-primary;
+	color: $color-white;
+	@include shadow-hover(1, 2);
+	&:focus {
+	  outline: none;
+	}
+	&:hover, &:focus {
+	  text-decoration: none;
+	}
+	&:hover {
+		background-color: $color-primary;
+	}
+	&:disabled, &.disabled {
+		opacity: $disabled-opacity;
+		pointer-events: none;
+		box-shadow: none !important;
+	}
+}
+
+
+// Iterate through each type of button to crate flat buttons
+@each $button, $color in $colors {
+	.button-#{$button} {
+		@extend .button-flat;
+		color: color($button);
+		&:hover {
+			background-color: color-highlight($button);
+		}
+	}
+}
+
+// Iterate through each type of button to create raised button
+@each $button, $color in $colors {
+	.button-raised-#{$button} {
+		@extend .button-raised;
+		background-color: color($button);
+		&:hover {
+			background-color: color($button);
+		}
+	}
+}
+
+// Default buttons
+button, .btn, a.btn, input[type=button], input[type=submit], input[type=reset]  {
+	@extend .button-flat;
+}

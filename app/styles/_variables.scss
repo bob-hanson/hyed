@@ -1,0 +1,416 @@
+
+
+
+/****************************** Colors ******************************/
+
+
+// Application Colors
+$color-healthicity: 			rgb(255, 61, 77);
+$color-auditing: 				rgb(22, 150, 243);
+$color-compliance: 				rgb(0, 188, 212);
+$color-analytics: 				rgb(0, 150, 136);
+$color-training: 				rgb(156, 39, 176);
+$color-coding: 				rgb(63, 81, 181);
+
+// General Colors
+$color-black: 					rgb(0,0,0);
+$color-white: 					rgb(255, 255, 255);
+$color-gray:					rgb(150, 150, 150);
+
+
+// Status Colors
+$color-success: 				rgb(121,175, 123);
+$color-warning: 				rgb(252, 181, 77);
+$color-error: 					rgb(198, 93, 93);
+$color-info: 					rgb(64, 134, 189);
+
+// Hues
+$color-adjust-dark: 			15%;
+$color-adjust-darker: 			25%;
+
+// Colors to be overwritten in each applicaiton.
+$default-color: 				"healthicity" !default;
+
+$color-primary: 				color($default-color);
+$color-light: 					color-light($default-color);
+$color-highlight: 				color-highlight($default-color);
+$color-dark: 					color-dark($default-color);
+$color-darker: 				color-darker($default-color);
+
+
+/****************************** Spacing ******************************/
+
+$spacing-xs:				0.25rem;
+$spacing-sm:				0.5rem;
+$spacing-md:				1rem;
+$spacing-lg:				1.5rem;
+$spacing-xl:				2rem;
+$spacing-super:			4rem;
+
+$spacing-block-element: 			0 0 $spacing-md;
+
+$root-font-size: 				16px; // For REM units
+$root-font-size-sm-screen: 		16px;
+$root-font-size-md-screen: 		16px;
+$root-font-size-lg-screen: 		16px;
+
+
+/****************************** TYPOGRAPHY ******************************/
+
+$font-path: 					'/fonts' !default;
+
+$fa-version: 						'4.4';
+
+
+$type-color-dark: 					$color-black;
+$type-color-primary: 				color-darker("gray");
+$type-color-light: 					color("gray");
+
+$type-color-body: 					$type-color-primary;
+$type-color-heading-page: 			$type-color-dark;
+$type-color-heading-section: 		$type-color-dark;
+
+
+$type-font-primary: 				'Open Sans', sans-serif;
+$type-font-heading-page: 			'nexa',  sans-serif;
+$type-font-heading-section: 		$type-font-primary;
+
+
+$type-line-body: 					1.5em;
+$type-line-heading: 				1.2em;
+$type-line-table: 					1.3em;
+$type-line-list: 					1.3em;
+
+$type-margin-body: 					$spacing-block-element;
+$type-margin-heading: 				1rem 0 0;
+
+$type-size-heading-1: 				3.3em;
+$type-size-heading-2: 				2em;
+$type-size-heading-3: 				1.5em;
+$type-size-heading-4: 				1.5em;
+$type-size-heading-5: 				1em;
+$type-size-heading-6: 				0.8em;
+
+
+$type-size-body-primary: 			$root-font-size;
+$type-size-body-sm: 				.75em;
+$type-size-body-lg: 				1.25em;
+$type-size-code: 					1em;
+
+
+$type-weight-thin: 					100;
+$type-weight-light: 				200;
+$type-weight-regular: 				400;
+$type-weight-medium: 				500;
+$type-weight-semibold: 				600;
+$type-weight-bold: 					700;
+$type-weight-extra-bold: 			800;
+
+$type-weight-heading-1: 			$type-weight-light;
+$type-weight-heading-2: 			$type-weight-regular;
+$type-weight-heading-3: 			$type-weight-medium;
+$type-weight-heading-4: 			$type-weight-semibold;
+$type-weight-heading-5: 			$type-weight-bold;
+$type-weight-heading-6: 			$type-weight-extra-bold;
+
+$type-weight-body: 					$type-weight-regular;
+$type-weight-small: 				$type-weight-regular;
+
+$link-box-shadow: 					inset 0 -3px 0;
+
+$type-fine-print-size: 				0.75em;
+$type-fine-print-color: 			color-light("gray");
+$type-fine-print-weight: 			$type-weight-regular;
+
+
+
+
+/****************************** ICONOGRAPHY ******************************/
+
+$icon-font-primary: 			'FontAwesome';
+$icon-font-audit-manager: 		'audit-manager';
+$icon-font-size-base:   		$type-size-body-primary;
+
+$icon-search: 					"\f002";
+$icon-add: 						"\f067";
+$icon-minus:					"\f068";
+$icon-save: 					"\f0c7";
+$icon-remove: 					"\f00d";
+$icon-trash: 					"\f014";
+$icon-edit: 					"\f040";
+$icon-next: 					"\f054";
+$icon-previous: 				"\f053";
+$icon-left: 					"\f0d9"; // caret-left
+$icon-right: 					"\f0da"; // caret-right
+$icon-down: 					"\f0d7"; // caret-down
+$icon-up: 						"\f0d8"; // caret-up
+$icon-arrow-up: 				"\f062";
+$icon-arrow-down: 				"\f063";
+$icon-angle-right:              "\f105";
+$icon-angle-double-right:       "\f101";
+$icon-angle-double-left:        "\f100";
+$icon-angle-left:               "\f104";
+$icon-settings: 				"\f013";
+$icon-sort: 			    	"\f0dc";
+$icon-sort-down: 				"\f0dd";
+$icon-sort-up: 				    "\f0de";
+$icon-filter: 					"\f0b0";
+$icon-import: 					"\f0ee"; // cloud-upload
+$icon-success: 					"\f058";
+$icon-error: 					"\f071";
+$icon-warning: 					"\f06a";
+$icon-info: 					"\f05a";
+$icon-question:					"\f059";
+$icon-user: 					"\f007";
+$icon-tasks: 					"\f0cb";
+$icon-notifications: 			"\f0f3";
+$icon-messages: 				"\f0e0";
+$icon-reports: 					"\f200";
+$icon-calendar: 				"\f073";
+$icon-menu: 					"\f0c9";
+$icon-menu-secondary:			"\f142"; // ellipsis-v
+$icon-folder-open: 				"\f07c";
+$icon-folder-close: 			"\f07b";
+$icon-exclamation-sign:			"\f06a";
+$icon-lock:  					"\f023";
+$icon-refresh:  				"\f021";
+$icon-zoom-in:  				"\f00e";
+$icon-zoom-out:  				"\f010";
+$icon-check-sign:				"\f14a";
+$icon-print:  					"\f02f"; //  print
+$icon-word:  					"\f1c2"; //  file-word-o
+$icon-excel:  					"\f1c3"; //  file-excel-o
+$icon-pdf:  					"\f1c1"; //  file-pdf-o
+$icon-text:  					"\f0f6"; //  file-text-o
+$icon-flag:  					"\f024";
+$icon-select:  					"\f046"; //  check-square-o
+$icon-dashboard:      "\f0e4";
+$icon-report:      "\f200";
+
+
+$icon-compliance-manager-audits: 					"\f046";
+$icon-compliance-manager-risk: 						"\f24e"; // balance-scale
+$icon-compliance-manager-incidents: 				"\f024";
+$icon-compliance-manager-documents: 				"\f07c"; // folder-open
+$icon-compliance-manager-attestations: 				"\f0ea"; // clipboard
+$icon-compliance-manager-training: 					"\f19c"; // university
+$icon-compliance-manager-roles: 					"\f0e8"; // sitemap
+$icon-compliance-manager-toolbox: 					"\f0f2"; // suitcase
+$icon-compliance-manager-superadmin: 				"\f132"; // shield
+
+// Icons created using Iconmoon
+$icon-audit-manager-cms: 							"\e900";
+$icon-audit-manager-key-findings: 					"\e901";
+$icon-audit-manager-note-provider: 					"\e902";
+$icon-audit-manager-audit-create: 					"\e903";
+$icon-audit-manager-audit-import: 					"\e904";
+$icon-audit-manager-audit-split: 					"\e905";
+$icon-audit-manager-audit-copy: 					"\e90e";
+$icon-audit-manager-missing-info: 					"\e906";
+$icon-audit-manager-note-internal: 					"\e907";
+$icon-audit-manager-audit-append: 					"\e908";
+$icon-audit-manager-audit-assign: 					"\e909";
+$icon-audit-manager-note-success: 					"\e90a";
+$icon-audit-manager-note-info: 						"\e90b";
+$icon-audit-manager-note-warning: 					"\e90c";
+$icon-audit-manager-chart-level-comment: 			"\e90d";
+
+
+
+
+/****************************** Buttons ******************************/
+
+$button-text-size: 				$type-size-body-primary;
+$button-text-weight: 			$type-weight-semibold;
+$button-border-width: 			1px;
+$button-border-type: 			solid ;
+$button-padding-top: 			1em;
+$button-padding-bottom: 			1em;
+$button-padding: 				$button-padding-top 2em $button-padding-bottom;
+$button-line-height:			1em;
+$button-margin: 				1rem;
+$button-border-radius: 			2px;
+
+$button-height: 				$button-padding-top + $button-line-height + $button-padding-top;
+
+
+
+
+/****************************** Shadows ******************************/
+$shadow-level-0:					0 0px 0px rgba(0,0,0,0.0), 0 0px 0px rgba(0,0,0,0.0);
+$shadow-level-1:					0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$shadow-level-2:					0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$shadow-level-3:					0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$shadow-level-4:					0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$shadow-level-5:					0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+
+/****************************** animations ******************************/
+$animation-type: 					cubic-bezier(.52,0,.53,1);
+$animation-speed-default: 			0.3s;
+$animation-speed-fast: 				0.1s;
+$animation-speed-slow: 				0.6s;
+
+
+
+/****************************** RESPONSIVE ******************************/
+
+$screen-xs:							300px;
+$screen-sm:							600px;
+$screen-md:							960px;
+$screen-lg:							1200px;
+$screen-xl:							1500px;
+$screen-xxl:						1800px;
+
+
+$screen-xs-max:						($screen-sm - 1);
+$screen-sm-max:						($screen-md - 1);
+$screen-md-max:						($screen-lg - 1);
+$screen-lg-max:						($screen-xl - 1);
+
+$grid-columns:						12;
+$grid-gutter-width:					24px;
+
+$container-xs:						300px;
+$container-sm:						600px;
+$container-md:						900px;
+$container-lg:						1200px;
+$container-xl:						1500px;
+
+$container-golden-padding-sm: 		0 12px;
+$container-golden-padding-md: 		0 24px ;
+$container-golden-padding-lg: 		0 48px 0 192px;
+$container-golden-padding-xl: 		0 12% 0 31%;
+
+
+
+/****************************** FORMS ******************************/
+
+$input-disabled-color: 			color-light("gray");
+$input-disabled-solid-color: 		color-light("gray");
+$input-focus-color: 			$color-primary;
+$input-border-color-empty: 		color("gray");
+$input-border-color: 			color-highlight("gray");
+$input-border-color-active: 		$color-primary;
+$input-success-color: 			color(success);
+$input-error-color: 			color(error);
+
+
+$forms-label-active-size: 		$type-size-body-sm;
+
+$radio-empty-color: 			color("gray");
+$radio-fill-color: 				$color-primary;
+
+$switch-checked-lever-bg: 		$color-light;
+$switch-bg-color: 				$color-primary;
+
+$switch-unchecked-bg: 			color-light("gray");
+$switch-unchecked-lever-bg: 		color("gray");
+
+$label-font-size: 				$type-size-body-primary;
+
+
+$disabled-opacity: 		0.4;
+
+
+/****************************** BADGES ******************************/
+
+$badge-border-radius: 			.5em;
+$badge-padding:  				.1em .6em;
+
+
+
+/****************************** TABLES ******************************/
+
+$table-head-color: 				$color-white;
+$table-head-background: 		color("gray");
+$table-head-weight: 			$type-weight-semibold;
+
+$table-cell-padding: 			0.5em;
+$table-cell-alignment: 			left;
+$table-cell-vertical-alignment: middle;
+
+$table-cell-border: 			solid 1px color-light("gray");
+
+
+
+/************************************************************************/
+/****************************** COMPONENTS ******************************/
+/************************************************************************/
+
+/****************************** headers ******************************/
+
+
+
+$header-size-xl: 				600px;
+$header-size-lg: 				400px;
+$header-size-md: 				150px;
+$header-size-sm: 				500px;
+
+$header-size-default: 			$header-size-md;
+
+$header-background-color: 		$color-primary;
+$header-color: 				$color-white;
+$header-height: 				125px;
+
+$header-avatar-size: 			50px;
+
+/****************************** Navigation ******************************/
+
+$nav-button-size: 					4.5rem;
+$nav-font-size: 					.9em;
+
+$nav-primary-background: 			$color-dark;
+$nav-primary-background-hover: 		$color-darker;
+$nav-primary-background-active: 		$color-darker;
+$nav-primary-text-color: 			$color-white;
+$nav-primary-max-width: 				14.125em;
+$nav-primary-icon-size: 				1.5em;
+
+
+
+// $nav-secondary-width: 				18.75em;
+$nav-secondary-width: 				21em;
+
+
+$nav-primary-toggle-front-content-sm: 	$icon-menu;
+$nav-primary-toggle-front-content-md: 	$icon-right;
+$nav-primary-toggle-back-content: 		"Hide Menu";
+
+$nav-secondary-color: 				"gray";
+$nav-secondary-background: 			color-highlight($nav-secondary-color);
+$nav-secondary-background-hover: 		color-dark($nav-secondary-color);
+$nav-secondary-background-active: 		color-dark($nav-secondary-color);
+$nav-secondary-text-color: 			color-darker($nav-secondary-color);
+$nav-secondary-text-weight: 			$type-weight-semibold;
+
+$nav-app-title-size: 				1.5em;
+$nav-app-title-line: 				3.25;
+$nav-app-title-weight: 				$type-weight-light;
+$nav-app-title-margin: 				0;
+
+$nav-section-title-size: 			1em;
+$nav-section-title-weight: 			$type-weight-medium;
+$nav-section-title-margin: 			0 0 0;
+
+$nav-page-title-size: 				2.5em;
+$nav-page-title-weight: 			$type-weight-light;
+$nav-page-title-margin: 			0;
+
+
+$nav-user-color: 					"gray";
+$nav-user-background: 				color-highlight($nav-user-color);
+$nav-user-background-hover: 		color-dark($nav-user-color);
+$nav-user-background-active: 		color-dark($nav-user-color);
+$nav-user-text-color: 				color-darker($nav-user-color);
+$nav-user-text-weight: 				$type-weight-semibold;
+
+$nav-main-background: 				$color-white;
+
+$main-content-padding: 				1.5rem;
+
+
+/****************************** Notifications ******************************/
+
+$page-overlay-color: 	rgba(0,0,0,0.8);
+$page-overlay-zindex: 	4;
